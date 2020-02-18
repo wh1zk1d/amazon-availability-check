@@ -10,7 +10,7 @@ const site = process.env.URL
 
 perf.start()
 
-log(`${emoji.find('truck').emoji}  Checking if cups are in stock yet`)
+log(`${emoji.find('truck').emoji} Checking if cups are in stock yet`)
 
 puppeteer
   .launch()
@@ -26,14 +26,14 @@ puppeteer
     await browser.close()
 
     log(
-      `\n${emoji.find('coffee').emoji}  Cups are ${
+      `\n${emoji.find('coffee').emoji} Cups are ${
         available.includes('nicht') ? chalk.red('not available') : chalk.green('available')
       }`
     )
 
     const execTime = perf.stop()
     const execSec = execTime.time / 1000
-    log(`\n${emoji.find('sparkles').emoji}  Finished in ${execSec.toFixed(2)}s`)
+    log(`\n${emoji.find('sparkles').emoji} Finished in ${execSec.toFixed(2)}s`)
   })
   .catch(err => {
     console.log(err)
