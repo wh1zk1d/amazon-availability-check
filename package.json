@@ -2,6 +2,9 @@
   "name": "cups-available",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "check-stock": "node index.js"
+  },
   "license": "MIT",
   "dependencies": {
     "chalk": "^3.0.0",
